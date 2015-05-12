@@ -181,7 +181,7 @@ done
 echo ""
 
 # check folder/files listed in $default_exclude_list exist
-verify "$default_exclude_list" "\$default_exclude_list"
+test "$default_exclude_list" "\$default_exclude_list"
 
 # check files listed in $default_include_files exist
 verify "$default_include_files" "\$default_include_files"
