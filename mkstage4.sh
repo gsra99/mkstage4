@@ -89,6 +89,7 @@ default_include_files="
 /dev/null
 /dev/console
 /home
+/media
 /mnt
 `find /mnt -name .keep`
 /proc
