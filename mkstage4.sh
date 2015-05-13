@@ -51,7 +51,7 @@ split_options="--suffix-length=1 --bytes=685m"
 tarOptions=" --preserve-permissions --create --absolute-names --totals --ignore-failed-read"
 
 # where to put the stage4
-stage4Location=/mnt/ICYBOX/stage4
+stage4Location=/mnt/backups/stage4
 
 # name prefix
 stage4prefix=`hostname`-stage4-`date +\%Y.\%m.\%d`
