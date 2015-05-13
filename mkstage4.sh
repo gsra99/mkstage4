@@ -68,6 +68,7 @@ default_exclude_pattern=""
 default_exclude_list="
 /dev
 /lost+found
+/media
 /mnt
 /proc
 /sys
