@@ -152,6 +152,7 @@ function find_files()
 }
 
 # check the exclude/include variables for non-existing entriesfunction verify()
+function verify()
 {
 	for i in $1; do
 		if [ ! -e "`echo "$i" | cut -d'=' -f2 | cut -d'*' -f1`" -a "$i" != "/lost+found" -a "$i" != "$stage4Location" ]; then
@@ -182,19 +183,19 @@ done
 echo ""
 
 # check folder/files listed in $default_exclude_list exist
-#verify "$default_exclude_list" "\$default_exclude_list"
+verify "$default_exclude_list" "\$default_exclude_list"
 
 # check files listed in $default_include_files exist
-#verify "$default_include_files" "\$default_include_files"
+verify "$default_include_files" "\$default_include_files"
 
 # check folder listed in $default_include_folders exist
-#verify "$default_include_folders" "\$default_include_folders"
+verify "$default_include_folders" "\$default_include_folders"
 
 #check folder listed in $custom_include_list exist
-#verify "$custom_include_list" "\$custom_include_list"
+verify "$custom_include_list" "\$custom_include_list"
 
 #check folder listed in $custom_exclude_list exist
-#verify "$custom_exclude_list" "\$custom_exclude_list"
+verify "$custom_exclude_list" "\$custom_exclude_list"
 
 # print out the version
 echo -e "\nBackup script $version"
