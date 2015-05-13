@@ -111,7 +111,7 @@ default_include_folders="
 custom_include_list="
 /home/*
 /usr/src/linux-`uname -r`
-/usr/local/portage/packages/*"
+/usr/local/portage/packages"
 
 # add files/folders here which are subfolders of a folder listed in $custom_include_list which should NOT
 # be backed up. eg.
