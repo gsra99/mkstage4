@@ -152,7 +152,7 @@ function find_files()
 	done
 }
 
-# check the exclude/include variables for non-existing entriesfunction verify()
+# check the exclude/include variables for non-existing entries
 function verify()
 {
 	for i in $1; do
