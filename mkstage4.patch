@@ -1,15 +1,6 @@
 --- mkstage4.sh.old	2015-05-13 10:45:29.000000000 +0100
-+++ mkstage4.sh	2015-05-13 10:48:56.000000000 +0100
-@@ -51,7 +51,7 @@
- tarOptions=" --preserve-permissions --create --absolute-names --totals --ignore-failed-read"
-  
- # where to put the stage4
--stage4Location=/mnt/backups/stage4
-+stage4Location=/mnt/ICYBOX/stage4
-  
- # name prefix
- stage4prefix=`hostname`-stage4-`date +\%Y.\%m.\%d`
-@@ -68,6 +68,7 @@
++++ mkstage4.sh	2015-05-17 09:20:26.000000000 +0100
+@@ -68,10 +68,12 @@
  default_exclude_list="
  /dev
  /lost+found
@@ -17,7 +8,27 @@
  /mnt
  /proc
  /sys
-@@ -109,7 +110,8 @@
+ /tmp
++/usr/local/portage
+ /usr/portage
+ /usr/src
+ /var/log
+@@ -88,11 +90,13 @@
+ /dev/null
+ /dev/console
+ /home
+-/mnt
++/media
++/mnt/ICYBOX
+ `find /mnt -name .keep`
+ /proc
+ /sys
+ /tmp
++/usr/local/portage/packages
+ /usr/portage
+ /usr/src
+ /var/log/emerge.log
+@@ -109,7 +113,8 @@
  # include/exclude these files/folders depening on your answer.
  custom_include_list="
  /home/*

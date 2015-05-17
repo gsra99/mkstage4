@@ -73,6 +73,7 @@ default_exclude_list="
 /proc
 /sys
 /tmp
+/usr/local/portage
 /usr/portage
 /usr/src
 /var/log
@@ -90,11 +91,12 @@ default_include_files="
 /dev/console
 /home
 /media
-/mnt
+/mnt/ICYBOX
 `find /mnt -name .keep`
 /proc
 /sys
 /tmp
+/usr/local/portage/packages
 /usr/portage
 /usr/src
 /var/log/emerge.log
